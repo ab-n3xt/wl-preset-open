@@ -6,6 +6,8 @@ It was implemented using Django, SQLite, and Bootstrap earlier in 2023.
 Feel free to make pull requests to add code or ask for suggestions. Thank you all!
 
 # Building from Source
+Requires latest version of [Python](https://www.python.org/).
+
 ```bash
 # Clone project
 git clone https://github.com/ab-n3xt/wl-preset-open.git
