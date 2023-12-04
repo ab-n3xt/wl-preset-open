@@ -7,28 +7,28 @@ Feel free to make pull requests to add code or ask for suggestions. Thank you al
 
 # Building from Source
 ```bash
-// Clone project
+# Clone project
 git clone https://github.com/ab-n3xt/wl-preset-open.git
 
-// Enter into the project directory
+# Enter into the project directory
 cd wl-preset-open
 
-// Create a Python virtual environment
+# Create a Python virtual environment
 python -m venv env
 
-// Activate the environment
-// As my machine is on Windows 10, I use the following command
+# Activate the environment
+# As my machine is on Windows 10, I use the following command
 .\env\Scripts\activate
 
-// Install Python dependencies
+# Install Python dependencies
 python -m pip -r requirements.txt
 
-// Go into website directory
+# Go into website directory
 cd website/
 
-// Run database migrations (and take a look at all of my awful changes to the db model)
+# Run database migrations (and take a look at all of my awful changes to the db model)
 python manage.py makemigrations
 
-// Finally, start the server
+# Finally, start the server
 python manage.py runserver
 ```
