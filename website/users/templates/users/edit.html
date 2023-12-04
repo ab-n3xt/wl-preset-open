@@ -1,0 +1,22 @@
+{% extends 'presets/base.html' %}
+
+{% load bootstrap5 %}
+
+{% block header %}
+{% include "presets/header.html" with title="W.L. Presets - Create" %}
+{% endblock %}
+
+{% block main %}
+<main class="d-flex container-xl mt-5 flex-column flex-xl-row align-items-center">
+    <div class="form-container container-fluid col-md-6 col-xl-6 p-4">
+        <h2>Change Password</h2>
+        <form class="d-flex flex-column mt-5" action="{% url 'users:edit' %}" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+            <input class="col-xl-4 mt-3 btn btn-primary" type="submit" value="Change password">
+            {% endbuttons %}
+        </form>
+    </div>
+</main>
+{% endblock %}

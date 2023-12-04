@@ -1,0 +1,94 @@
+/** GENERAL THEME **/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+}
+
+body {
+    background-color: #354f52;
+    color: white;
+}
+
+header {
+    background-color: #2f3e46;
+}
+
+article div {
+    background-color: #2f3e46;
+}
+
+.form-container {
+    background-color: #2f3e46;
+}
+
+/** DETAIL STYLING **/
+
+.detail-img {
+    height: 350px;
+    object-fit: contain;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 10%;
+}
+
+/** CARD STYLING **/
+/* https://ordinarycoders.com/blog/article/codepen-bootstrap-card-hovers */
+.card {
+    background-color: #2f3e46;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, .08), 0 0 6px rgba(0, 0, 0, .05);
+    transition: .3s transform cubic-bezier(.155, 1.105, .295, 1.12), .3s box-shadow, .3s -webkit-transform cubic-bezier(.155, 1.105, .295, 1.12);
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+.card-img-top {
+    height: 10rem;
+    object-fit: contain;
+}
+
+.card-body {
+    background-color: #202c33;
+}
+
+
+
+/** MESSAGE STYLING **/
+
+.message {
+    border-radius: 10px;
+    min-width: 200px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    margin: 20px;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-animation {
+    animation-name: fade;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}

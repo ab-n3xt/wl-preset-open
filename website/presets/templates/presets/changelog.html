@@ -1,0 +1,33 @@
+{% extends 'presets/base.html' %}
+
+{% load bootstrap5 %}
+
+{% block header %}
+{% include "presets/header.html" with title="W.L. Presets - Change Log" %}
+{% endblock %}
+
+{% block main %}
+<main class="d-flex container-xl mt-5 flex-column flex-xl-row align-items-center">
+    <div class="form-container container-fluid p-4">
+        <article>
+            <h1>Change Log</h1>
+            <h4>March 17, 2023</h4>
+            <ul>
+                <li>Presets can now have multiple images. Current preset owners can edit their preset and upload additional files accordingly.</li>
+            </ul>
+            <h4>March 09, 2023</h4>
+            <ul>
+                <li>Added two more sorting filters: 'Newest' and 'Oldest'. Now by default, the page displays the newest presets.</li>
+                <li>Added total count of likes, downloads, and views of user's uploaded presets.</li>
+                <li>Viewing other's likes is easier.</li>
+            </ul>
+            <h4>March 04, 2023</h4>
+            <ul>
+                <li>Added filter functionality to filter by a specific character model or by the stats of the preset.</li>
+                <li>Added an email on the 'About' page to contact for support or sending suggestions.</li>
+                <li>Added more character types for preset uploads.</li>
+            </ul>
+        </article>
+    </div>
+</main>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'presets/base.html' %}
+
+{% load bootstrap5 %}
+
+{% block header %}
+{% include "presets/header.html" with title="W.L. Presets - About" %}
+{% endblock %}
+
+{% block main %}
+<main class="d-flex container-xl mt-5 flex-column flex-xl-row align-items-center">
+    <div class="form-container container-fluid p-4">
+        <article>
+            <h1>About</h1>
+            <p>Preset hosting page for the adult game <a class="text-info" href="https://candyvalleynetwork.com/projects/wildlife-an-adult-rpg/">Wild Life.</a></p>
+            <p>Created in 2023 to fix all the scattered presets all over the internet.</p>
+            <h1>Implementation</h1>
+            <p>Created using <a class="text-info" href="https://www.djangoproject.com/">Django</a> and hosted on <a class="text-info" href="https://linode.com">Linode</a>.</p>
+            <h1>Support / Suggestions</h1>
+            <p>If you would like to report any problems with the site or suggest a new feature, feel free to hit me up at: <a class="text-info" href="mailto:nnn3xt@gmail.com">nnn3xt@gmail.com</a></p>
+        </article>
+    </div>
+</main>
+{% endblock %}

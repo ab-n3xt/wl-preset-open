@@ -1,0 +1,33 @@
+{% extends 'presets/base.html' %}
+
+{% block header %}
+{% include "presets/header.html" with title="W.L. Presets - Saved" %}
+{% endblock %}
+
+{% block main %}
+<main>
+    <h2>Saved</h2>
+    <section>
+    {% if saved_presets %}
+        {% for preset in saved_presets %}
+        <div>
+            <a href="{% url 'presets:detail' preset.id %}">
+                <img src="{{ MEDIA_URL }}{{ preset.image_file.name }}">
+                <p>{{ preset.name }}</p>
+            </a>
+            <form action="{% url 'presets:unsave' preset.id %}" method="post">
+                {% csrf_token %}
+                <input id="submit" type="submit" value="Unsave">
+            </form>
+            <form action="{% url 'presets:download' preset.id %}" method="post">
+                {% csrf_token %}
+                <input id="submit" type="submit" value="Download">
+            </form>
+        </div>
+        {% endfor %}
+    {% else %}
+    <p>No presets saved at this time.</p>
+    {% endif %}
+    </section>
+</main>
+{% endblock %}

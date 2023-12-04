@@ -1,0 +1,33 @@
+{% extends 'presets/base.html' %}
+
+{% load bootstrap5 %}
+
+{% block header %}
+{% include 'presets/header.html' with title="W.L. Presets - Login" %}
+{% endblock %}
+
+{% block main %}
+<main class="d-flex container-xl mt-5 flex-column flex-xl-row align-items-center">
+    <div class="form-container col-6 p-4 me-xl-2 mb-xl-0 mb-2">
+        <h2>Login</h2>
+        <form class="d-flex flex-column mt-5" id="login_user" action="{% url 'users:login' %}" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+            <input class="col-xl-2 mt-3 btn btn-warning" type="submit" value="Login">
+            {% endbuttons %}
+        </form>
+    </div>
+    <div class="form-container col-6 p-4 ms-xl-2 mb-xl-0 mb-2">
+        <h2>Create New Account</h2>
+        <form class="d-flex flex-column mt-5" id="new_user" action="{% url 'users:create' %}" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form %}
+            {% buttons %}
+            <input class="col-xl-2 mt-3 btn btn-warning" type="submit" value="Create">
+            {% endbuttons %}
+        </form>
+    </div>
+    
+</main>
+{% endblock %}

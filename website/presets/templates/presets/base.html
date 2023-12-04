@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+{# Load Bootstrap v5 #}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+
+{% block header %}{% endblock %}
+
+<body>
+    {% include "presets/header-nav.html" %}
+    {% block main %}{% endblock %}
+    {% block footer %}
+    <footer>
+        <div class="message">
+            {% bootstrap_messages %}
+        </div>
+        
+    </footer>
+    {% endblock %}
+</body>
+
+</html>
